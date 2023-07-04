@@ -87,10 +87,6 @@ def sub_cb(topic, msg):
     else:                        # If any other message is received ...
         print("Unknown message", topic) # ... do nothing but output that it happened.
 
-# Function to generate a random number between 0 and the upper_bound
-def random_integer(upper_bound):
-    return random.getrandbits(32) % upper_bound
-
 
 def send_humidity_AND_temperature_value(): #SENDS THE HUMIDITY SENSOR DATA TO THE HUMIDITY FEED
     global last_random_sent_ticks
@@ -105,10 +101,8 @@ def send_humidity_AND_temperature_value(): #SENDS THE HUMIDITY SENSOR DATA TO TH
     red.off() 
     yellow.off()
     green.off()
+
     
-    some_number = random_integer(100)
-    
-    print("Publishing: {0} to {1} ... ".format(some_number, AIO_HUMIDITY_FEED), end='')
     try:
         client.publish(topic=AIO_HUMIDITY_FEED, msg=str(dhtSensor.humidity/100))
         print("")
