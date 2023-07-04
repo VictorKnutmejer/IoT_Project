@@ -24,14 +24,14 @@ SEND_DATA_INTERVAL = 20000    # milliseconds
 last_random_sent_ticks = 0  # milliseconds
 
 # Wireless network
-WIFI_SSID = "NETGEAR87"
-WIFI_PASS = "silentcanoe448" # No this is not our regular password. :)
+WIFI_SSID = "YOUR WIFI SSID"
+WIFI_PASS = "YOUR WIFI PASSWORD" # No this is not our regular password. :)
 
 # Adafruit IO (AIO) configuration
 AIO_SERVER = "io.adafruit.com"
 AIO_PORT = 1883
-AIO_USER = "Knutmaster"
-AIO_KEY = "aio_CEal61ZSi3M7xpCxPZ9kZoeh8att"
+AIO_USER = "YOUR ADAFRUIT USERNAME"
+AIO_KEY = "YOUR ADAFRUIT ACCESS KEY"
 AIO_CLIENT_ID = ubinascii.hexlify(machine.unique_id())  # Can be anything
 
 AIO_HUMIDITY_FEED = "Knutmaster/feeds/humidity"
